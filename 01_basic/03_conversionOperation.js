@@ -10,14 +10,15 @@ let valueInNumber = Number(score);
 // "19abc" => Nan
 // ture => 1, false => 0
 
-let isLoggedIn = "yes";
+let isLoggedIn = null;
 
 let booleanIsloggedIn = Boolean(isLoggedIn);
-// console.log(booleanIsloggedIn);
+console.log(booleanIsloggedIn);
 
 // 1 => true, 0 => false
 // "" => false
 // "text" => true
+// null => false
 
 let number = 23;
 let stringNumber = String(number);
