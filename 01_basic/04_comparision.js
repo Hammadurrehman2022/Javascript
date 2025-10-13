@@ -13,8 +13,8 @@
 // console.log(null == 0);
 // console.log(null >= 0);
 
-// Equality check == and comparision > < >= <= work deifferently
-// comparisions convert null to 0 that's why null >= 0 is true
+/* Equality check == and comparision > < >= <= work deifferently
+ comparisions convert null to 0 that's why null >= 0 is true*/
 
 
 // console.log(undefined == 0);
