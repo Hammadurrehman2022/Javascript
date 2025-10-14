@@ -26,4 +26,22 @@ const testObj = {
 const myFunction = function(){
     console.log("Hello World")
 }
-console.log(typeof myFunction)
+// console.log(typeof myFunction)
+
+/* +++++++++++++++++++++++++++++ */
+/* JS uses stack and heap memory */
+/* Stack(primitive) , Heap(non-primitive) */
+let currentLocatioin = "karachi";
+let previousLocation = currentLocatioin;
+currentLocatioin = "lahore";
+// console.log(currentLocatioin);
+// console.log(previousLocation);
+let studenOne = {
+    email: "abcd@gmail.com",
+    name: "xyz",
+}
+let admin = studenOne;
+admin.name = "abc";
+console.log(studenOne.name);
+console.log(admin.name);
+
