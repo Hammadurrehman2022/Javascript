@@ -31,13 +31,6 @@ const objNewCom = Object.assign({}, obj1, obj2, obj3)
 const obj5 = {...obj1, ...obj3}
 // console.log(obj5);
 
-console.log(Object.keys(user));
-console.log(Object.values(user));
-console.log(Object.entries(user));
-console.log(user.hasOwnProperty("id"));
-console.log(user);
-
-
 const fromDatabase = [
     {
         id: 1,
@@ -54,7 +47,23 @@ const fromDatabase = [
 ]
 // console.log(fromDatabase[0].id);
 
+// console.log(Object.keys(user));
+// console.log(Object.values(user));
+// console.log(Object.entries(user));
+// console.log(user.hasOwnProperty("id"));
+// console.log(user);
 
+//      Object Destructuring
+
+const patient = {
+    name: "zus",
+    phoneNumber: 342342341,
+    patientDisease: "kjfsakdjf"
+}
+// console.log(patient.patientDisease);
+
+const {patientDisease: Disease} = patient
+// console.log(Disease);
 
 
 
