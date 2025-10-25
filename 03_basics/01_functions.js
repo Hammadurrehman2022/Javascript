@@ -1,3 +1,5 @@
+const { jsx } = require("react/jsx-runtime");
+
 function myName(){
  console.log("H");
  console.log("a");
@@ -30,5 +32,24 @@ function UserLoginMessage(name = "newUser"){
     return `${name} just logged in `;
 }
 UserLoginMessage("Hammad")
-console.log(UserLoginMessage("Hammad"));
+// console.log(UserLoginMessage("Hammad"));
+
+function calculateCartPrice(price1, price2 ,...price){
+    return price
+}
+// console.log(calculateCartPrice(200, 344, 2134, 343, 343));
+
+const company = {
+    name: "firebase",
+    service: "database"
+}
+
+function handleObject(getObject){
+    return `${getObject.name} provide ${getObject.service} services `
+}
+console.log(handleObject(company))
+// console.log({
+//     name: "Hammad",
+//     service: "web"
+// });
 
