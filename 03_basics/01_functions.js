@@ -1,5 +1,3 @@
-const { jsx } = require("react/jsx-runtime");
-
 function myName(){
  console.log("H");
  console.log("a");
@@ -47,9 +45,18 @@ const company = {
 function handleObject(getObject){
     return `${getObject.name} provide ${getObject.service} services `
 }
-console.log(handleObject(company))
-// console.log({
+// console.log(handleObject(company))
+// console.log(handleObject({
 //     name: "Hammad",
 //     service: "web"
-// });
+// }));
 
+const arr = [233, 4124, 3231, 232]
+
+function thirdValueofArray(anyArray){
+    return anyArray[2]
+}
+console.log(thirdValueofArray(arr))
+console.log(thirdValueofArray([
+    244, 232, 323, 2321
+]))
