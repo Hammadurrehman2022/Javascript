@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+    <style>
+        #circle {
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            background: #d1cccc; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Every 1 seond the light will change color</h1>
+    <div id="circle"></div>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let color = "green"
+    function changeColor(){
+        if(color === "green"){
+            color = "red"
+        } else {
+            color = "green"
+        }
+        document.getElementById("circle").style.background = color
+    }
+
+    let intervalId = setInterval(changeColor, 100)
+
+    function stopChangingColor() {
+        clearInterval(intervalId)
+    }
+
+    document.getElementById("stop").addEventListener("click", stopChangingColor)
+</script>
+</html>

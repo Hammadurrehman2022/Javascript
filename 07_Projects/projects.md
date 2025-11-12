@@ -157,5 +157,65 @@ function newGame() {
   });
 }
 
+```
 
+## Project 5 keyboard 
+
+```javascript
+const insert = document.getElementById("insert")
+
+window.addEventListener("keydown", function(e) {
+  insert.innerHTML = `
+  <div class = "color">
+  <table>
+  <tr>
+    <th>key/th>
+    <th>key Code</th>
+    <th>key</th>
+  </tr>
+  <tr>
+    <td>${e.key === " "? "space": e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}432</td>
+  </tr>
+
+</table>
+  </div>
+  `
+})
+```
+
+## Project 6 Ultimate Color
+
+```javascript
+function randomColor() {
+  const hex = "0123456789abcdef"
+  let color = "#"
+  for(let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() *16)]
+
+  }
+  return color
+}
+
+let intervalID;
+
+function startChangeingColor(){
+  console.log(intervalID)
+  if(!intervalID) {
+    intervalID = setInterval(changeColor, 1000)
+    function changeColor() {
+      document.body.style.background = randomColor()
+    }
+  }
+}
+
+function stopChangeingColor() {
+  clearInterval(intervalID)
+  intervalID = null
+  console.log(intervalID)
+}
+
+document.getElementById("start").addEventListener("click", startChangeingColor)
+document.getElementById("stop").addEventListener("click", stopChangeingColor)
 ```
