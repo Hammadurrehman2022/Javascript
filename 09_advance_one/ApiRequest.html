@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xmlhttpRequest</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const requestURL = "https://api.github.com/users/Hammadurrehman2022"
+    const xhr = new XMLHttpRequest()
+    xhr.open("get", requestURL)
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState)
+        if(xhr.readyState === 4){
+            let data = JSON.parse(this.responseText)
+            displayName(data)
+            console.log(this.responseText)
+        }
+    }
+    xhr.send()
+    // console.log(xhr.readyState)
+    // console.log(xhr)
+    function displayName(data){
+        console.log(data.followers)
+        const div = document.createElement('div')
+        div.innerHTML = `<img class="profile_pic" src="${data.avatar_url}">
+      <p class = "followers">${data.followers}</p>`
+      document.body.appendChild(div)
+    }
+</script>
+</html>
